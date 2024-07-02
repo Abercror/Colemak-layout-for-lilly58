@@ -7,23 +7,23 @@
     keymap {
         compatible = "zmk,keymap";
 
-        numbers {
-            bindings = <
-&trans  &trans            &trans             &trans                &trans                 &trans                               &trans        &trans        &trans        &trans  &trans  &trans
-&trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOUBLE_QUOTES                    &kp N6        &kp N7        &kp N8        &kp N9  &kp N0  &trans
-&trans  &kp MINUS         &kp KP_PLUS        &kp KP_EQUAL          &kp KP_ASTERISK        &kp C_AC_INSERT                      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N4  &kp N5  &trans
-&trans  &trans            &trans             &trans                &trans                 &trans             &trans    &trans  &trans        &trans        &trans        &trans  &trans  &trans
-                                             &trans                &trans                 &trans             &trans    &trans  &to 1         &trans        &trans
-            >;
-        };
-
         Main {
             bindings = <
 &kp ESC    &kp N1  &kp N2  &kp N3            &kp N4    &kp N5                               &kp N6     &kp N7  &kp N8     &kp N9   &kp N0    &kp DELETE
 &kp TAB    &kp Q   &kp W   &kp F             &kp P     &kp B                                &kp J      &kp L   &kp U      &kp Y    &kp SEMI  &kp BSPC
 &kp CAPS   &kp A   &kp R   &kp S             &kp T     &kp G                                &kp M      &kp N   &kp E      &kp I    &kp O     &kp SQT
 &kp LSHFT  &kp Z   &kp X   &kp C             &kp D     &kp V   &tog 3           &bt BT_NXT  &kp K      &kp H   &kp COMMA  &kp DOT  &kp FSLH  &kt RIGHT_ALT
-                           &kp LEFT_CONTROL  &kp LALT  &sl 0   &kp BACKSPACE    &kp SPACE   &kp ENTER  &to 2   &trans
+                           &kp LEFT_CONTROL  &kp LALT  &sl 1   &kp BACKSPACE    &kp SPACE   &kp ENTER  &to 2   &trans
+            >;
+        };
+
+        numbers {
+            bindings = <
+&trans  &trans            &trans             &trans                &trans                 &trans                               &trans        &trans        &trans        &trans  &trans  &trans
+&trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOUBLE_QUOTES                    &kp N6        &kp N7        &kp N8        &kp N9  &kp N0  &trans
+&trans  &kp MINUS         &kp KP_PLUS        &kp KP_EQUAL          &kp KP_ASTERISK        &kp C_AC_INSERT                      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N4  &kp N5  &trans
+&trans  &trans            &trans             &trans                &trans                 &trans             &trans    &trans  &trans        &trans        &trans        &trans  &trans  &trans
+                                             &trans                &trans                 &trans             &trans    &trans  &to 0         &trans        &trans
             >;
         };
 
@@ -33,7 +33,7 @@
 &trans  &kp F1  &kp F2   &kp F3   &kp F4  &kp F5                     &kp F6  &kp PG_UP  &kp UP    &kp PG_DN  &kp PRINTSCREEN  &trans
 &trans  &kp F6  &kp F7   &kp F8   &kp F9  &kp F10                    &trans  &kp LEFT   &kp DOWN  &kp RIGHT  &trans           &trans
 &trans  &trans  &kp F11  &kp F12  &trans  &trans   &trans    &trans  &trans  &trans     &trans    &trans     &trans           &trans
-                         &trans   &trans  &trans   &trans    &trans  &to 1   &trans     &trans
+                         &trans   &trans  &trans   &trans    &trans  &to 0   &trans     &trans
             >;
         };
 
@@ -42,7 +42,7 @@
 &kp ESC    &kp N1  &kp N2  &kp N3     &kp N4    &kp N5                             &kp N6    &kp N7    &kp N8     &kp N9   &kp N0    &kp BSPC
 &kp TAB    &kp Q   &kp W   &kp E      &kp R     &kp T                              &kp Y     &kp U     &kp I      &kp O    &kp P     &kp EQUAL
 &kp CAPS   &kp A   &kp S   &kp D      &kp F     &kp G                              &kp H     &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z   &kp X   &kp C      &kp V     &kp B      &tog 1       &trans     &kp N     &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+&kp LSHFT  &kp Z   &kp X   &kp C      &kp V     &kp B      &to 0        &trans     &kp N     &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
                            &kp LCTRL  &kp LALT  &kp SPACE  &kp ENTER    &kp SPACE  &kp RALT  &kp RGUI  &kp RCTRL
             >;
         };
